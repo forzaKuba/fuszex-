@@ -102,6 +102,33 @@
   .note{font-size:13px;color:var(--muted);margin-top:8px}
   .swipe{display:none;font-size:12px;color:var(--muted);margin-bottom:6px}
 
+  /* TIMELINE */
+  .timeline{background:var(--panel);border-radius:8px;padding:8px 18px}
+  .tl{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #262a35;align-items:baseline}
+  .tl:last-child{border-bottom:none}
+  .tl time{font-family:monospace;font-weight:700;color:var(--yellow)}
+  .tl.smoke span{color:#cfd3db}
+  .tl.work span{color:#2ecc40;font-weight:700}
+  .ratio{display:flex;height:26px;border-radius:13px;overflow:hidden;margin:14px 0 6px;font-size:12px;font-weight:800}
+  .ratio div{display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden}
+  .r-smoke{background:#6b6f7a;flex:83}
+  .r-work{background:#2ecc40;color:#000;flex:17}
+
+  /* WARRANTY */
+  .warranty{border:3px dashed var(--yellow);border-radius:8px;padding:20px;background:repeating-linear-gradient(135deg,#171a22 0 14px,#1b1e27 14px 28px)}
+  .warranty h3{color:var(--yellow);font-size:clamp(18px,5vw,22px);text-transform:uppercase;margin-bottom:8px}
+  .warranty ol{padding-left:20px;font-size:15px;color:#cfd3db}
+  .warranty li{padding:3px 0}
+  .gate{display:inline-block;margin-top:14px;background:#000;border:2px solid var(--red);padding:8px 14px;font-weight:900;letter-spacing:1px;transform:rotate(-2deg)}
+  .small{font-size:11px;color:var(--muted);margin-top:10px}
+
+  /* CARS */
+  .cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:14px}
+  .car{background:var(--panel);border-radius:8px;padding:16px;border-left:4px solid var(--yellow)}
+  .car .ico{font-size:34px}
+  .car h3{font-size:17px;margin:4px 0}
+  .car p{font-size:14px;color:#cfd3db}
+
   /* VERDICT */
   .verdict{background:var(--red);border-radius:8px;padding:24px;text-align:center}
   .verdict h3{font-size:clamp(22px,6vw,28px);font-weight:900;text-transform:uppercase}
@@ -141,6 +168,9 @@
   <b>PILNE</b> Tapezierhilfe przesłuchana przez prokuraturę — „Ja tylko wykonywałam polecenia"
   <b>PILNE</b> Poziomica zeznaje: „Nikt mnie nie zapytał o zdanie"
   <b>PILNE</b> Gładź zażądała rozwodu ze ścianą
+  <b>PILNE</b> Ekipa rozważa oklejanie samochodów tą samą techniką — „na pinezki, żeby folia nie uciekła na autostradzie"
+  <b>PILNE</b> Gwarancja obowiązuje do bramy. Za bramą — „się nie znamy"
+  <b>PILNE</b> Przerwa na papieroska trwała dłużej niż samo tapetowanie
   <b>PILNE</b> Rozliczenie w kartach Pokémon — urząd skarbowy prosi o wycenę holografików
 </div></div>
 
@@ -281,19 +311,70 @@
         <tr><td>Obsługa urządzenia Tapezierhilfe</td><td>1 h nauki z YouTube</td><td>Bulbasaur</td><td class="paid">Opłacone</td></tr>
         <tr><td>Montaż pinezek „Pinex Pro" (kolorowe)</td><td>47 szt.</td><td>Magikarp ×47</td><td class="disputed">Sporne</td></tr>
         <tr><td>Usługa zdjęcia gładzi (gratis)</td><td>ok. 2 m²</td><td>Psyduck</td><td class="disputed">Reklamacja</td></tr>
+        <tr><td>Przerwy na papieroska i epeta</td><td>9 szt. (83% czasu)</td><td>Koffing</td><td class="disputed">Do wyjaśnienia</td></tr>
+        <tr><td>Gwarancja „do bramy"</td><td>ok. 15 m</td><td>Ditto</td><td class="paid">Wygasła</td></tr>
         <tr><td>Konsultacja „na oko"</td><td>bez limitu</td><td>Snorlax (śpi)</td><td class="disputed">Nie dotarł</td></tr>
-        <tr><td>RAZEM</td><td></td><td>51 kart + 1 holo Charizard (żądanie)</td><td class="disputed">ODMOWA</td></tr>
+        <tr><td>RAZEM</td><td></td><td>53 karty + 1 holo Charizard (żądanie)</td><td class="disputed">ODMOWA</td></tr>
       </tbody>
     </table>
     </div>
     <p class="note">Inwestor domaga się zwrotu Charizarda. Wykonawcy twierdzą, że karta „uległa samoistnemu odklejeniu z koszulki", podobnie jak tapeta.</p>
   </section>
 
+  <!-- TIMELINE -->
+  <section>
+    <h2>Harmonogram dnia pracy</h2>
+    <div class="timeline">
+      <div class="tl smoke"><time>08:00</time><span>Przyjazd. Najpierw papierosek „na rozruch". 🚬</span></div>
+      <div class="tl smoke"><time>08:15</time><span>Rozpakowanie Tapezierhilfe. Przerwa na epeta, bo „trzeba to przemyśleć". 💨</span></div>
+      <div class="tl work"><time>08:40</time><span>Praca! Pierwszy pas tapety (krzywo).</span></div>
+      <div class="tl smoke"><time>08:52</time><span>Papierosek za dobrze wykonaną robotę. 🚬</span></div>
+      <div class="tl smoke"><time>09:20</time><span>Epet. Krasnal ma mango, Rzepex — „lodowy arbuz". Długa dyskusja, który lepszy. 💨</span></div>
+      <div class="tl work"><time>10:05</time><span>Praca! Drugi pas tapety (krzywo, ale w drugą stronę — się wyrównuje).</span></div>
+      <div class="tl smoke"><time>10:15</time><span>Papierosek, bo „klej musi złapać". Klej nie złapał. 🚬</span></div>
+      <div class="tl smoke"><time>11:00</time><span>Epet się rozładował. Przerwa na ładowanie epeta. 🔌</span></div>
+      <div class="tl work"><time>11:45</time><span>Praca! Wbijanie pinezek „Pinex Pro".</span></div>
+      <div class="tl smoke"><time>11:50</time><span>Papierosek pożegnalny i odjazd. Tapeta macha na pożegnanie. 🚬👋</span></div>
+    </div>
+    <div class="ratio"><div class="r-smoke">PRZERWY 83%</div><div class="r-work">PRACA</div></div>
+    <p class="note">Dym w pokoju dziecięcym zaklasyfikowano jako „naturalną mgłę leśną, pasującą do motywu tapety".</p>
+  </section>
+
+  <!-- WARRANTY -->
+  <section>
+    <h2>Gwarancja</h2>
+    <div class="warranty">
+      <h3>Karta gwarancyjna ekipy Krasnal &amp; Rzepex</h3>
+      <ol>
+        <li>Gwarancja obowiązuje <b>do bramy</b>.</li>
+        <li>Po przekroczeniu bramy przez wykonawców — <b>się nie znamy</b>.</li>
+        <li>Reklamacje przyjmujemy wyłącznie w trakcie przerwy na papieroska.</li>
+        <li>Odklejenie się tapety nie stanowi wady — to „naturalna praca materiału".</li>
+        <li>Pinezki objęte są gwarancją dożywotnią (pinezek, nie inwestora).</li>
+      </ol>
+      <div class="gate">🚧 GWARANCJA KOŃCZY SIĘ TUTAJ → BRAMA</div>
+      <p class="small">Numer telefonu do serwisu: „jakoś się zgadamy".</p>
+    </div>
+  </section>
+
+  <!-- CARS -->
+  <section>
+    <h2>Plany rozwoju firmy</h2>
+    <p class="lead">Zachęceni sukcesem wykonawcy rozważają wejście w nową branżę: <b>oklejanie samochodów folią tą samą techniką</b>.</p>
+    <div class="cars">
+      <div class="car"><div class="ico">🚗</div><h3>Pakiet „Mat Krzywy"</h3><p>Folia nałożona na oko, pod kątem jak tapeta. Auto wygląda, jakby cały czas skręcało.</p></div>
+      <div class="car"><div class="ico">📌</div><h3>Mocowanie „Pinex Auto"</h3><p>Folia przypięta pinezkami do lakieru. Przy 120 km/h działa jak spadochron hamujący — gratis.</p></div>
+      <div class="car"><div class="ico">🛠️</div><h3>Tapezierhilfe Turbo</h3><p>Urządzenie do tapet dostosowane do maski. Instrukcja nadal po niemiecku, nadal nieprzeczytana.</p></div>
+      <div class="car"><div class="ico">🚬</div><h3>Zapach w gratisie</h3><p>Każde auto oklejane w trybie przerw — wnętrze pachnie mango, arbuzem i papieroskiem.</p></div>
+    </div>
+    <p class="note">Gwarancja na oklejanie aut: do bramy myjni. Potem się nie znamy.</p>
+  </section>
+
   <!-- VERDICT -->
   <section>
     <div class="verdict">
       <h3>Werdykt redakcji</h3>
-      <p>Ściana do skucia, gładź do poprawy, wykonawcy na szkolenie BHP z obsługi kleju.<br>Tapeta, wbrew wszystkiemu, nadal walczy. Trzymamy kciuki. I pinezki.</p>
+      <p>Ściana do skucia, gładź do poprawy, wykonawcy na szkolenie BHP z obsługi kleju i zakaz palenia w promieniu bramy.<br>Tapeta, wbrew wszystkiemu, nadal walczy. Trzymamy kciuki. I pinezki.</p>
       <div class="stampbox">FUSZERKA ROKU 2026</div>
     </div>
   </section>
